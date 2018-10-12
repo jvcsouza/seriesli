@@ -2,8 +2,8 @@ const express = require("express");
 const app = express();
 const bodyparser = require("body-parser");
 
-var port =  process.env.PORT || processo.env.OPENSHIFT_NODEJS_PORT || 8080,
-    ip    =  process.env.IP || processo.env.OPENSHIFT_NODEJS_IP || '0.0.0.0'
+var port =  process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
+    ip    =  process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0'
 
 app.get("/teste", (req, resp) => {
     resp.send("DEU CERTO ESSA PORRA!")
